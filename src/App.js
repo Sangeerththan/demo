@@ -1,23 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
+import FirstComponent from './components/FirstComponent/FirstComponent';
+import SecondComponent from './components/SecondComponent/SecondComponent';
 
 function App() {
+  const components = [<FirstComponent />, <SecondComponent />]
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    {components.map(item =><li>{item}</li>)}
     </div>
   );
 }
